@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener(
             document.querySelectorAll("div.input-bcc > textarea")[newEmailTabIndex].value = "${url.searchParams.get("bcc")}";
             document.querySelectorAll("div.input-subject > input")[newEmailTabIndex].value = "${url.searchParams.get("subject")}";
             var newEmailTextArea = document.querySelectorAll("div.input-body > textarea")[newEmailTabIndex];
-            setTimeout(() => { newEmailTextArea.value = "${url.searchParams.get("body")}" + newEmailTextArea.value; }, 500);
+            setTimeout(() => { newEmailTextArea.value = "${url.searchParams.get("body").replaceAll(/\r?\n/g, "\\n").replaceAll(/"/g, '\\"')}" + newEmailTextArea.value; }, 500);
           `.replaceAll(/.*"null".*/g, '')
           });
         }
