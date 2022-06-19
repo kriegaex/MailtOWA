@@ -1,8 +1,12 @@
 {
-  "name": "MailtOWA: Mailto O365 Webmail / OutlookWebApp",
-  "version": "1.1",
-  "description": "Mailto links open Microsoft Office 365 Webmail / Outlook Web Application Compose by default",
-  "permissions": ["storage"],
+  "name": "All-Inkl.com 'mailto:' link handler",
+  "version": "1.0",
+  "description": "Open 'mailto:' links in All-Inkl.com web mailer",
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://webmail.all-inkl.com/*"
+  ],
   "options_page": "popup.html",
   "background": {
     "scripts": ["background.js"],
@@ -10,13 +14,13 @@
   },
   "content_scripts": [ {
     "all_frames": true,
-    "js": [ "mailtowa.js" ],
+    "js": [ "mailto.js" ],
     "matches": [ "\u003Call_urls>" ],
     "run_at": "document_end"
 } ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "MailtOWA",
+    "default_title": "All-Inkl.com 'mailto:' link handler",
     "default_icon": {
       "16": "images/mail16.png",
       "32": "images/mail32.png",

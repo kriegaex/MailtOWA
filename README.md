@@ -1,19 +1,21 @@
-# MailtOWA
+# All-Inkl.com `mailto:` link handler
 
-### Chrome Extension opens mailto: links by default with Outlook Web Application (OWA) / Office 365
-
-... the missing bit of functionality that Microsoft should have provided?
+This Chrome extension opens `mailto:` links by default in the [All-Inkl.com web mailer](https://webmail.all-inkl.com/).
 
 ### Usage
 
-* Install <a href="https://chrome.google.com/webstore/detail/mailtowa-mailto-o365-webm/hmfdmbcialnfpcjcjmlenekddfeaimnm?hl=en&gl=US" title="Chrome Extension opens mailto: links by default with Outlook Web Application (OWA) / Office 365">MailtOWA from the Google Chrome store</a>
-* Click any `mailto:` link and compose your message directly in OWA
-* Profit?
+* Clone or download the repository, then use Chrome's "load unpacked extension" feature. Currently, I have no plans of submitting the extension to the Chrome web store, because probably there will not be many users and the extension needs to be migrated from manifest V2 to V3 anyway in order to continue functioning in 2023.
+* Click any `mailto:` link and compose your message directly the All-Inkl.com web mailer.
+* Please note that you must be logged into the web mailer already, because it does not provide any "compose new e-mail" link URL. If you happen to be logged into multiple accounts in multiple open browser tabs, a new e-mail will be created for the `mailto:` link in each of them. You just send it where you prefer and cancel message composition in the other(s). 
 
 ### Test
-If you have the MailtOWA extension installed, clicking these links should load Outlook Web Application (OWA) in a new tab. (You might need to refresh the page.)
-* <a href="mailto:fake@example.com">Basic email address</a>
-* <a href="mailto:yourfriends@example.com?subject=Wassup&body=Emoji%20domains%3F%20That%20seems%20like%20a%20terrible%20idea%21%20%F0%9F%A4%91%0A%0Ahttps%3A%2F%2Fi%E2%9D%A4%EF%B8%8F.ws">Email address, subject and body</a>
+
+When you have the extension installed, try clicking these links:
+* <a href="mailto:fake@example.com">Basic e-mail address (To)</a>
+* <a href="mailto:info@acme.org?cc=cc@acme.org&bcc=bcc@acme.org&subject=German%20umlauts%20%C3%A4%C3%B6%C3%BC%20%C3%84%C3%96%C3%9C&body=Hello%20world!%0D%0A%0D%0ACreating%20e-mails%20from%20'mailto%3A'%20links%20is%20not%20so%20difficult.%20%F0%9F%99%82">To, CC, BCC, subject and body</a>
+
+If you want to compose and test your own `mailto:` links, try https://mailtolink.me/. I am not affiliated with that web site, I just found it during a web search for an online `mailto:` link generator. 
 
 ### Credits
-MailtOWA is free extension by <a href="https://jonroig.com" title="Jon Roig dot com" target="_blank">Jon Roig</a> / <a href="https://i❤️.ws" title="Register weird emoji domains" target="_blank">i❤️.ws Emoji Domains</a>
+
+Inspired by [MailtOWA](https://github.com/jonroig/MailtOWA).
