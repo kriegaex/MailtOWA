@@ -8,14 +8,14 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.runtime.onMessage.addListener(
   function (message, sender, sendResponse) {
-    var url = new URL(message.mailtoLink)
+    const url = new URL(message.mailtoLink);
     chrome.tabs.query(
       {url: "*://webmail.all-inkl.com/*"},
 
       function (tabs) {
-        var numTabs = tabs.length;
+        const numTabs = tabs.length;
         for (var i = 0; i < numTabs; i++) {
-          var tab = tabs[i];
+          const tab = tabs[i];
           console.log(tab.url + " -> " + tab.title);
           chrome.windows.update(tab.windowId, {focused: true});
           chrome.tabs.update(tab.id, {selected: true});
