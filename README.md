@@ -12,6 +12,7 @@ This Chrome extension opens `mailto:` links by default in the [All-Inkl.com web 
 
 When you have the extension installed, try clicking these links:
 * <a href="mailto:fake@example.com">Basic e-mail address (To)</a>
+* <a href="mailto:fake@example.com,foo@acme.org">Two e-mail addresses (To)</a>
 * <a href="mailto:info@acme.org?cc=cc@acme.org&bcc=bcc@acme.org&subject=German%20umlauts%20%C3%A4%C3%B6%C3%BC%20%C3%84%C3%96%C3%9C&body=Hello%20world!%0D%0A%0D%0ACreating%20e-mails%20from%20'mailto%3A'%20links%20is%20not%20so%20difficult%2C%20even%20%22double-quoted%22%20text%20is%20working.%20%F0%9F%99%82">To, CC, BCC, subject and body</a>
 
 If you want to compose and test your own `mailto:` links, try https://mailtolink.me/. I am not affiliated with that web site, I just found it during a web search for an online `mailto:` link generator. 
